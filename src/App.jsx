@@ -10,10 +10,15 @@ import { College } from "./College";
 import { Student } from "./Student";
 import { EgDefaultProps } from "./EgDefaultProps";
 import { Wrapper } from "./Wrapper";
+import Skills from "./Skills";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [val, setVal] = useState("Ajay Gole")
 
+  const[nam,setNam] = useState("");
+  const[pass, setPass]=useState("");
+  const[email,setEmail]=useState("");
   // let name="Ajay...";
   // let age=23;
   // let email="ajaygole728@gmail.com";
@@ -34,7 +39,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Login />
       <Image />
       <h1>hello...</h1>
@@ -62,7 +67,7 @@ function App() {
       <College col={collegeArr[2]} />
       <College col={collegeArr[3]} />
       {/* <User name={name} age={age} email= {email}/> */}
-      <User user={userObj} />
+      {/* <User user={userObj} />
       <User user={userObj2} />
       <br />
       <br />
@@ -90,6 +95,29 @@ function App() {
       <Wrapper>
         <h1>Hello Children...</h1>
       </Wrapper>
+      <h1>Input Field...</h1>
+      <input type="text" value={val} onChange={(eventt)=>setVal(eventt.target.value)} placeholder="Enter Text Here"></input>
+      <h2>{val}</h2>
+      <button onClick={()=>setVal("")}>Clear</button>
+      <br></br>
+      <br></br>
+      <form action="" method="get">
+        <input type="name" value={nam} onChange={(e)=>setNam(e.target.value)} placeholder="Enter Name"></input>
+        <br></br>
+        <br></br>
+        <input type="password" value={pass} onChange={(e)=>setPass(e.target.value)} placeholder="Enter Password"></input>
+        <br></br>
+        <br></br>
+        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Email"></input>
+        <br></br>
+        <br></br>
+        <button onClick={()=>{setNam("");setPass(""),setEmail("")}}>clear</button>
+        <h2>{nam}</h2>
+        <h2>{pass}</h2>
+        <h2>{email}</h2> */} 
+      {/* </form> */}
+      <h1>Hellooo</h1>
+      <Skills/>
     </div>
   );
 }
